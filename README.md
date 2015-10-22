@@ -26,29 +26,22 @@ Ruby is a dynamic, open source programming language with a focus on simplicity a
 
 Mac users already have Ruby installed! If you're running Mac OS X Mavericks, Yosemite or El Capitan, you've got the latest major version of Ruby (2.0) installed on your computer.
 
-**If you're running an older version of Mac OS X** [we'll need to do an advanced setup on your computer](http://brew.sh/), make sure you ask an instructor for help in that case.
+**If you're running an older version of Mac OS X** we'll need to do an advanced setup on your computer, make sure you ask an instructor for help in that case.
 
 #### Microsoft Windows
 
 Windows users need to install Ruby on their computer using [RubyInstaller](http://rubyinstaller.org/). Download and install the latest version available (don't use the x64 variant, even if you're running 64-bit system).
 
-### [SQLite](http://www.sqlite.org/download.html)
+### PostgreSQL
 
-SQLite is a simple, well-tested and widely-used database system. In fact, it's running on all of your smartphones right now! We'll use it to save our application's data for future use.
+If you can get past the crazy name, PostgreSQL is a robust, well-tested and widely-used database system. We'll use it to save our application's data for future use.
 
 #### Mac OS X
 
-Again, if you're running Mac OS X, SQLite is already installed!
-
-**If you happen to be running a really old version of OS X (pre-Leopard), you'll have to consult with an instructor, those operating systems are not supported for this workshop.**
+To install PostgreSQL on your Mac, you simply need to download and install [Postgres.app](http://postgresapp.com/). Once the app is running you should see an icon of an elephant at the top right of your menu bar.
 
 #### Microsoft Windows
 
-Windows users need to do a little bit of work to get SQLite setup on their machines:
+Windows users can install PostgreSQL on their computer by [following these step by step instructions](http://www.postgresqltutorial.com/install-postgresql/).
 
-1. Go to [SQLite3 download page](http://www.sqlite.org/download.html), "Precompiled Binaries For Windows" section;
-2. Download `sqlite-shell-win32-x86` and `sqlite-dll-win32-x86` archive files;
-3. Unzip those archives into a new folder called `C:\SQLite3`
-4. [Follow the instructions on this page](http://www.java.com/en/download/help/path.xml) for your version of Windows to add the `C:\SQLite3` directory to your PATH variable (Windows 10 users can follow the Windows 7 steps).
-
-This can be a bit complicated, but don't worry, we're here to help! Make sure to ask one of the instructors if any of these instructions go over your head.
+If you have any issues, don't panic, we're here to help and we'll make sure you've got it sorted out by the time you need to use it.
