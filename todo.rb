@@ -18,3 +18,8 @@ get '/' do
   @todos = Todo.all
   erb :index
 end
+
+post '/todos' do
+  @todo = Todo.create(:task => params['task'])
+  redirect to('/')
+end

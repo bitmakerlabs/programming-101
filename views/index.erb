@@ -15,7 +15,7 @@
 
     <main id="todo-app">
       <form id="new-todo" action="/todos" method="post">
-        <input type="text" id="todo-task" name="todo-task" placeholder="What needs to be done?">
+        <input type="text" id="todo-task" name="task" placeholder="What needs to be done?">
         <button type="submit" class="button-inline">Add</button>
       </form>
       <aside class="todo-empty">
@@ -27,13 +27,13 @@
         <% @todos.each do |todo| %>
           <li class="todo">
             <input type="checkbox" class="todo-complete">
-            <label><%= todo %></label>
+            <label><%= todo.task %></label>
           </li>
         <% end %>
       </ul>
 
       <footer id="todos-actions">
-        <span class="todos-remaining"><strong><%= @todos.size %></strong> items left</span>
+        <span class="todos-remaining"><strong><%= @todos.size %></strong> <%= @todos.size == 1 ? 'item left' : 'items left' %> left</span>
         <ul id="todos-filters">
           <li class="todo-filter all is-active">
             <a href="#">All</a>
