@@ -61,6 +61,18 @@ a:hover {
   background-color: #990000;
 }
 
+button {
+  background: #999;
+  color: white;
+  font-size: 0.75rem;
+  border: 0;
+  transition: all 0.2s ease-out;
+}
+
+button:hover {
+  background-color: #990000;
+}
+
 /* Todo App Container */
 #todo-app {
   background-color: white;
@@ -173,6 +185,30 @@ a:hover {
   display: inline-block;
   max-height: 1rem;
   vertical-align: middle;
+}
+
+/* Form for adding a new Todo */
+#new-todo {
+  overflow: auto;
+}
+
+#todo-task {
+  display: inline-block;
+  float: left;
+  width: 80%;
+  border: 0;
+  padding: 0.5rem;
+}
+
+#todo-task:focus {
+  outline: none;
+}
+
+.button-inline {
+  width: 20%;
+  line-height: 1;
+  padding: 0.75rem 1rem;
+  float: left;
 }
 
 /* Media queries for adjusting the layout on different devices*/

@@ -14,6 +14,10 @@
     </header>
 
     <main id="todo-app">
+      <form id="new-todo" action="/todos" method="post">
+        <input type="text" id="todo-task" name="todo-task" placeholder="What needs to be done?">
+        <button type="submit" class="button-inline">Add</button>
+      </form>
       <aside class="todo-empty">
         <img src="images/spaceship.png" alt="You're done!">
         <h2>You're all done!</h2>
