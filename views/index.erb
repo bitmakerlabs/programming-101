@@ -20,30 +20,16 @@
       </aside>
 
       <ul id="todos-list">
-        <li class="todo">
-          <input type="checkbox" class="todo-complete">
-          <label>Build time machine</label>
-        </li>
-        <li class="todo">
-          <input type="checkbox" class="todo-complete">
-          <label>Travel through time</label>
-        </li>
-        <li class="todo">
-          <input type="checkbox" class="todo-complete">
-          <label>Meet parents</label>
-        </li>
-        <li class="todo">
-          <input type="checkbox" class="todo-complete">
-          <label>Convince them to fall in love</label>
-        </li>
-        <li class="todo">
-          <input type="checkbox" class="todo-complete">
-          <label>Go Back to the Future</label>
-        </li>
+        <% @todos.each do |todo| %>
+          <li class="todo">
+            <input type="checkbox" class="todo-complete">
+            <label><%= todo %></label>
+          </li>
+        <% end %>
       </ul>
 
       <footer id="todos-actions">
-        <span class="todos-remaining"><strong>5</strong> items left</span>
+        <span class="todos-remaining"><strong><%= @todos.size %></strong> items left</span>
         <ul id="todos-filters">
           <li class="todo-filter all is-active">
             <a href="#">All</a>
