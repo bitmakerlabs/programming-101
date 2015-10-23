@@ -18,34 +18,41 @@
         <input type="text" id="todo-task" name="task" placeholder="What needs to be done?">
         <button type="submit" class="button-inline">Add</button>
       </form>
-      <aside class="todo-empty">
-        <img src="images/spaceship.png" alt="You're done!">
-        <h2>You're all done!</h2>
-      </aside>
 
-      <ul id="todos-list">
-        <% @todos.each do |todo| %>
-          <li class="todo">
-            <input type="checkbox" class="todo-complete">
-            <label><%= todo.task %></label>
-          </li>
-        <% end %>
-      </ul>
+      <form id="update-todos" action="/completed" method="post">
+        <input type="hidden" name="todos[]" value="0">
+        
+        <aside class="todo-empty">
+          <img src="images/spaceship.png" alt="You're done!">
+          <h2>You're all done!</h2>
+        </aside>
 
-      <footer id="todos-actions">
-        <span class="todos-remaining"><strong><%= @todos.size %></strong> <%= @todos.size == 1 ? 'item left' : 'items left' %> left</span>
-        <ul id="todos-filters">
-          <li class="todo-filter all is-active">
-            <a href="#">All</a>
-          </li>
-          <li class="todo-filter active">
-            <a href="#">Active</a>
-          </li>
-          <li class="todo-filter completed">
-            <a href="#">Completed</a>
-          </li>
+        <ul id="todos-list">
+          <% @todos.each do |todo| %>
+            <li class="todo <%= todo.completed_at ? 'is-complete' : '' %>">
+              <input type="checkbox" class="todo-complete" name="todos[]" value="<%= todo.id %>" <%= 'checked' if todo.completed_at %>>
+              <label><%= todo.task %></label>
+            </li>
+          <% end %>
         </ul>
-      </footer>
+
+        <footer id="todos-actions">
+          <span class="todos-remaining"><strong><%= @todos.reject(&:completed_at).size %></strong> <%= @todos.size == 1 ? 'item' : 'items' %> left</span>
+          <ul id="todos-filters">
+            <li class="todo-filter all is-active">
+              <a href="#">All</a>
+            </li>
+            <li class="todo-filter active">
+              <a href="#">Active</a>
+            </li>
+            <li class="todo-filter completed">
+              <a href="#">Completed</a>
+            </li>
+          </ul>
+          <input type="hidden" name="_method" value="patch">
+          <button type="submit" class="todos-update">Save</button>
+        </footer>
+      </form>
     </main>
 
     <footer>

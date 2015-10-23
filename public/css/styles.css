@@ -67,6 +67,7 @@ button {
   font-size: 0.75rem;
   border: 0;
   transition: all 0.2s ease-out;
+  padding: 0.25rem 1rem;
 }
 
 button:hover {
@@ -168,6 +169,7 @@ button:hover {
   margin: 0;
   padding: 0;
   list-style-type: none;
+  padding: 0.5rem 0;
 }
 
 /* Individual filter items */
@@ -190,6 +192,7 @@ button:hover {
 /* Form for adding a new Todo */
 #new-todo {
   overflow: auto;
+  border-bottom: 1px solid #e4e4e4;
 }
 
 #todo-task {
@@ -222,8 +225,12 @@ button:hover {
 
   #todos-filters {
     float: left;
-    width: 75%;
-    text-align: right;
-    padding: 0 0.5rem;
+    width: 50%;
+    padding: 0;
+  }
+
+  .todos-update {
+    text-align: center;
+    margin-top: 0;
   }
 }

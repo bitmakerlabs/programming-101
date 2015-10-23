@@ -23,3 +23,17 @@ post '/todos' do
   @todo = Todo.create(:task => params['task'])
   redirect to('/')
 end
+
+patch '/completed' do
+  if params['todos']
+    Todo.all.each do |todo|
+      if params['todos'].include?(todo.id.to_s)
+        todo.update(:completed_at => Time.now)
+      else
+        todo.update(:completed_at => nil)
+      end
+    end
+  end
+
+  redirect to('/')
+end
