@@ -8,30 +8,45 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/styles.css">
   </head>
-
   <body>
     <header>
       <h1>Todos</h1>
     </header>
-    <main>
-      <ul>
-        <li>Build time machine</li>
-        <li>Travel through time</li>
-        <li>Meet parents</li>
-        <li>Convince them to fall in love</li>
-        <li>Go Back to the Future</li>
+
+    <main id="todo-app">
+      <ul id="todos-list">
+        <li class="todo">
+          <input type="checkbox" class="todo-complete">
+          <label>Build time machine</label>
+        </li>
+        <li class="todo">
+          <input type="checkbox" class="todo-complete">
+          <label>Travel through time</label>
+        </li>
+        <li class="todo">
+          <input type="checkbox" class="todo-complete">
+          <label>Meet parents</label>
+        </li>
+        <li class="todo">
+          <input type="checkbox" class="todo-complete">
+          <label>Convince them to fall in love</label>
+        </li>
+        <li class="todo">
+          <input type="checkbox" class="todo-complete">
+          <label>Go Back to the Future</label>
+        </li>
       </ul>
 
-      <footer>
-        <span><strong>5</strong> items left</span>
-        <ul>
-          <li>
+      <footer id="todos-actions">
+        <span class="todos-remaining"><strong>5</strong> items left</span>
+        <ul id="todos-filters">
+          <li class="todo-filter all is-active">
             <a href="#">All</a>
           </li>
-          <li>
+          <li class="todo-filter active">
             <a href="#">Active</a>
           </li>
-          <li>
+          <li class="todo-filter completed">
             <a href="#">Completed</a>
           </li>
         </ul>
@@ -39,7 +54,7 @@
     </main>
 
     <footer>
-      <small>Created in the future at <img src="images/bitmaker.png" alt="Bitmaker" /></small>
+      <small>Created in the future at <img src="images/bitmaker.png" alt="Bitmaker" class="footer-wordmark" /></small>
     </footer>
   </body>
 </html>
