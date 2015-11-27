@@ -14,14 +14,13 @@ We'll use Google Chrome as the web browser in this workshop. It provides some ve
 
 Atom is our text editor of choice and where we'll be writing all of our code. It provides some powerful features specifically geared toward writing code like highlighting keywords in many programming languages and the ability to easily jump between files in a project (among many others!).
 
-### [Ruby](https://www.ruby-lang.org/en/)
-
-Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. We'll be using it to write the code that runs on the web server and interacts with our database.
-
 ### [Heroku Toolbox](https://toolbelt.heroku.com/)
 
 Heroku is a service that makes it super simple to deploy web applications created with Ruby. It requires a free account, [which you can sign up for here](https://www.heroku.com). The Heroku Toolbox simplifies the process of getting your app on the web down to a small handful of commands.
 
+### [Ruby](https://www.ruby-lang.org/en/)
+
+Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. We'll be using it to write the code that runs on the web server and interacts with our database.
 
 #### Mac OS X
 
