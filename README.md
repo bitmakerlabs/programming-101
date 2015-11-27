@@ -32,6 +32,7 @@ Mac users already have Ruby installed! If you're running Mac OS X Mavericks, Yos
 
 Windows users need to install Ruby on their computer using [RubyInstaller](http://rubyinstaller.org/). Download and install the latest version available (don't use the x64 variant, even if you're running 64-bit system).
 
+----
 
 ### Having problems? Don't panic!
 
