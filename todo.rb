@@ -36,7 +36,6 @@ class Todo
   end
 
   def update(changes)
-    puts "Updating todos/#{id}"
     @@firebase.update("todos/#{id}", changes);
   end
 end
