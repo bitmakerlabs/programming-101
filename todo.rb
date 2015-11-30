@@ -23,8 +23,10 @@ class Todo
 
     response = @@firebase.get("todos")
 
-    response.body.each do |id, todo|
-      todos << Todo.new(id, todo)
+    if response.body
+      response.body.each do |id, todo|
+        todos << Todo.new(id, todo)
+      end
     end
 
     todos
